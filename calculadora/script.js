@@ -1,21 +1,31 @@
 
 // Variaveis Globais: Inicialização
 var screen = document.getElementById("ecra"); // ecra de visualizacao do resultado
-var primeiroValor = -1; // -1 é a flag indicando vazio
-var segundoValor = -1; // -1 é a flag indicando vazio
+var primeiroValor = ""; // -1 é a flag indicando vazio
+var segundoValor = ""; // -1 é a flag indicando vazio
 var operacao = ""; // vazio indica nenhum sinal aritmetico pressiondo
 
+function valida(oper, valor){
+
+    if(oper == "" && valor == ""){
+        screen.value = "";
+    }
+}
 
 // Verifica o valor numerico clicado:
 function algarismoPressionado(numero) {
 
-    if (primeiroValor == -1) {
-        primeiroValor = numero;
-        screen.value = "";
+    if (primeiroValor == "" || operacao == "") {
+
+        valida(operacao, primeiroValor)
+        primeiroValor += numero;
+
+        
+
         screen.value += "" + numero;
 
     } else {
-        segundoValor = numero;
+        segundoValor += numero;
         screen.value += "" + numero;
     }
 }
@@ -54,7 +64,7 @@ function primirTeclaDelete() {
 
 // Função de Inicialização de Variaveis Globais:
 function inicia() {
-    primeiroValor = -1;
-    segundoValor = -1;
+    primeiroValor = "";
+    segundoValor = "";
     operacao = "";
 }

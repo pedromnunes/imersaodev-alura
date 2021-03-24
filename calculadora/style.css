@@ -10,17 +10,26 @@ body {
 
 .container {
     text-align: center;
-    padding: 20px;
-    height: 100vh;
+    padding: 10px;
+    /*height: 100vh;*/
+    
 }
 
-.header {}
+.header {
+    color: rgb(236, 226, 226);
+    font-size: 16pt;
+}
+
+.header strong{
+    color: rgb(227, 230, 106);
+}
 
 .content {
     width: 250px;
     /*height: 400px;*/
     margin: 0 auto;
     position: relative;
+    
 }
 
 .footer {}
@@ -51,10 +60,14 @@ body {
 }
 
 .div-ecra{
-    width:238px; 
+    width:241px; 
     border: 1px solid #000;
 }
 
 table{
     width: 250px;
+}
+
+hr{
+    width: 23%;
 }
