@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+
+            <div> Calculadora <strong>Imersão Dev_</strong> da Alura</div>
+
+           <hr/>
+        </div>
+
+        <div class="content">
+
+            <div>
+
+                <div class="div-ecra">
+                    <input id="ecra" disabled="true" />
+                </div>
+
+                <table>
+                    <thead></thead>
+                    <tbody>
+
+                        <tr>
+                            <td class="botao" id="escape">Esc</td>
+                            <td class="botao" id="divisao" onclick="operacaoSelecionada('/')">/</td>
+                            <td class="botao" id="multiplicacao" onclick="operacaoSelecionada('*')">*</td>
+                            <td class="botao" id="delete" onclick="primirTeclaDelete()">Del</td>
+                        </tr>
+                        <tr>
+                            <td class="botao" id="sete" onclick="algarismoPressionado(7)">7</td>
+                            <td class="botao" id="oito" onclick="algarismoPressionado(8)">8</td>
+                            <td class="botao" id="nove" onclick="algarismoPressionado(9)">9</td>
+                            <td class="botao" id="subtracao" onclick="operacaoSelecionada('-')">-</td>
+                        </tr>
+                        <tr>
+                            <td class="botao" id="quatro" onclick="algarismoPressionado(4)">4</td>
+                            <td class="botao" id="cinco" onclick="algarismoPressionado(5)">5</td>
+                            <td class="botao" id="deis" onclick="algarismoPressionado(6)">6</td>
+                            <td class="botao" id="soma" onclick="operacaoSelecionada('+')">+</td>
+                        </tr>
+                        <tr>
+                            <td class="botao" id="um" onclick="algarismoPressionado(1)">1</td>
+                            <td class="botao" id="dois" onclick="algarismoPressionado(2)">2</td>
+                            <td class="botao" id="tres" onclick="algarismoPressionado(3)">3</td>
+                            <td rowspan="2" class="botao" id="enter" onclick="primirTeclaEnter()">Enter</td>
+                        </tr>
+                        <tr>
+                            <td class="botao" id="zero" onclick="algarismoPressionado(0)">0</td>
+                            <td class="botao" id="doisZero" onclick="algarismoPressionado(00)">00</td>
+                            <td class="botao" id="ponto">.</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="footer">
+             <hr/>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
